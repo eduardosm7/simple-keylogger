@@ -35,5 +35,7 @@ def main():
     with Listener(on_press=on_press) as listener:
         listener.join()
 
+
 if __name__ == "__main__":
     main()
+
